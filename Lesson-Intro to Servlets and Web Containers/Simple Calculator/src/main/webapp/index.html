@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>Simple Calculator</title>
+    <script>
+        function calculate() {
+            var add1 = document.getElementById("add1").value;
+            var add2 = document.getElementById("add2").value;
+            var mult1 = document.getElementById("mult1").value;
+            var mult2 = document.getElementById("mult2").value;
+
+            var xhr = new XMLHttpRequest();
+            xhr.onreadystatechange = function () {
+                if (this.readyState == 4 && this.status == 200) {
+                    var results = JSON.parse(this.responseText);
+                    if (results.sum !== undefined) {
+                        document.getElementById("sum").value = results.sum;
+                    }
+                    if (results.product !== undefined) {
+                        document.getElementById("product").value = results.product;
+                    }
+                }
+            };
+            xhr.open("POST", "calculate", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("add1=" + add1 + "&add2=" + add2 + "&mult1=" + mult1 + "&mult2=" + mult2);
+        }
+    </script>
+</head>
+<body>
+<div>
+    <input id="add1" type="text"> + <input id="add2" type="text"> = <input id="sum" readonly type="text">
+</div>
+<br>
+<div>
+    <input id="mult1" type="text"> * <input id="mult2" type="text"> = <input id="product" readonly type="text">
+</div>
+
+<br><br>
+<button onclick="calculate()">Submit</button>
+</body>
+</html>

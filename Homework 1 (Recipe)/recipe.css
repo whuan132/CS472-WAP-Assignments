@@ -1,0 +1,75 @@
+/* Styles for Grandma's Lemon Meringue Pie page */
+body {
+    background: url('http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/1/silverware.jpg') repeat fixed;
+    color: #404040;
+    font-family: Georgia, Garamond, serif;
+    font-size: 11pt;
+}
+
+h1, h2 {
+    color: #A4A400;
+    background-color: #F0F0F0;
+    font-family: 'Lucida Sans Unicode', Helvetica, Arial, sans-serif;
+    text-decoration: underline;
+}
+
+h1 {
+    text-align: center;
+    font-size: 22pt;
+    font-weight: bold;
+}
+
+h2 {
+    text-align: left;
+    font-size: 18pt;
+    font-weight: normal;
+}
+
+ul {
+    list-style-image: url('http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/1/pie_icon.gif');
+}
+
+abbr[title] {
+    text-decoration: underline dotted;
+    cursor: help;
+}
+
+blockquote {
+    background-color: #FFFFA8;
+    border-left: 5px solid #A4A400;
+    margin: 10px 20px;
+    padding: 10px;
+    font-style: italic;
+}
+
+blockquote p {
+    margin: 0;
+}
+
+pre {
+    font-family: monospace;
+    white-space: pre;
+}
+
+a {
+    color: #A4A400;
+}
+
+strong {
+    font-weight: bold;
+}
+
+/* Validator Icons */
+#validators {
+    text-align: right;
+}
+
+#validators img {
+    vertical-align: middle;
+}
+
+#validators pre {
+    font-family: monospace;
+    white-space: pre;
+    color: gray;
+}
