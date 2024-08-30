@@ -49,11 +49,11 @@ beer-adviser/
 
 ### Prerequisites
 
-- Java Development Kit (JDK) 17 or higher
+- Java Development Kit (JDK) 11 or higher
 - Maven
-- A servlet container like Apache Tomcat
-
-### Running the Application
+- A servlet container like Apache Tomcat (optional if using Docker)
+- Docker
+- Docker Compose
 
 ## Docker Deployment
 
